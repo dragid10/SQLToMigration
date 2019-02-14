@@ -1,0 +1,5 @@
+(1, 1, 0, 'Super Administrator', 'admin@localhost', '$2y$10$p4/cAvYbaAZHm46cU6eapugapO0RDppVtiOEfCr3yzYiF9ucISHnO', 0, NULL, '2017-09-19 22:23:28', '2017-09-19 22:23:28')
+(2, 1, 1, ' Thomas Edward Burlett', 'burlette@miamioh.edu', '$2y$10$MWQl4rTrBdcUI3z36MS8mOG7YZpKxJgey/iOjKr7LYuICYFEjWhgy', 0, 'NwkJpJx8ZkiiMbvIPAAFaxUgAuuKfNOJ7DxehdGIYme9FIYxi80RY861Rjzu', '2017-09-19 22:30:06', '2017-09-19 22:30:06')
+(3, 1, 0, 'Admin', 'admin@admin.com', '$2y$10$JNQns9.J0/Bsuxq8XQnKN.ALLQPk7NoX.rbug7OST25c22VMpG.Du', 0, '9n4OylPoKlB1bjFraYXy0yklLX65wi6yxIAVP3BLACoxuH32bU2fGM10y2nG', '2017-12-06 18:17:45', '2018-06-18 22:43:50')
+(4, 2, 0, 'Michael Gonella', 'gonella@sbcc.edu', '$2y$10$DZYD0G6/n9pTTClKFurJ6eVjoNAJ8X8CCQRXeXcNAvVKqTY7diXyu', 0, 'x4emGjX3XWrtuw2wsLb8duexBkHzMDTmr2OORbTeTnOubAfggtztWwd89xaQ', '2018-05-01 19:39:13', '2018-05-01 19:39:13')
+(8, 1, 0, 'Sam Duemler', 'duemlese@miamioh.edu', '$2y$10$xLo51/cgvziQ9gBBtrpT2OZMS2DFLh/WG7/QPn4qEXzAK6NWOaZJy', 0, 'YSE1hdq1r8zwBNgqGcuwGxVqRv7kfbRalhmZKQkX23T48KyD96KVa1IHoipJ', '2018-09-26 22:53:07', '2018-09-26 22:53:07')
