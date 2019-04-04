@@ -1,4 +1,5 @@
 import os
+import re
 
 import model
 import model.Species
@@ -83,7 +84,9 @@ def create_sources():
     f = open('sql/sources.sql', 'r', encoding="utf-8")
     source_list = []
     for line in f:
-        split_line = line.replace('(', '').replace(')', '').replace("'", "").split(',')
+        # split_line = line.replace('(', '').replace(')', '').replace("'", "").split(',')
+        line = re.sub(",('| '|)", '~ ', line)
+        split_line = line.replace('(', '').replace(')', '').replace("'", "").split('~')
         source_list.append(model.Source.Source(split_line[1].rstrip().lstrip(), split_line[2].rstrip().lstrip(),
                                                split_line[3].rstrip().lstrip(), split_line[4].rstrip().lstrip(),
                                                split_line[5].rstrip().lstrip(), split_line[6].rstrip().lstrip(),
@@ -160,9 +163,9 @@ def create_species():
 
 
 if __name__ == '__main__':
-    create_migrations()
-    create_roles()
-    create_schemes()
+    # create_migrations()
+    # create_roles()
+    # create_schemes()
     create_sources()
-    create_species()
-    create_users()
+    # create_species()
+    # create_users()
