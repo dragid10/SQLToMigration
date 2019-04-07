@@ -85,8 +85,20 @@ def create_sources():
     source_list = []
     for line in f:
         # split_line = line.replace('(', '').replace(')', '').replace("'", "").split(',')
-        line = re.sub(",('| '|)", '~ ', line)
-        split_line = line.replace('(', '').replace(')', '').replace("'", "").split('~')
+        line = line.rstrip().lstrip()
+        if line.count(',') > 10:
+            comma_ind = line.find(',')
+            # print(line)
+            while comma_ind != -1:
+                comma_ind = line.find(',', comma_ind + 1)
+                if (line[comma_ind + 2] != "'") and (line[comma_ind + 2].isdigit() is False):
+                    line_list = list(line)
+                    line_list[comma_ind] = ';'
+                    line = "".join(line_list)
+                    # print(line)
+
+        line = re.sub(",(?<!([A-z],))", '~ ', line)
+        split_line = line.replace('(', '').replace(')', '').replace("'", "").replace("\\"", """).split('~')
         source_list.append(model.Source.Source(split_line[1].rstrip().lstrip(), split_line[2].rstrip().lstrip(),
                                                split_line[3].rstrip().lstrip(), split_line[4].rstrip().lstrip(),
                                                split_line[5].rstrip().lstrip(), split_line[6].rstrip().lstrip(),
@@ -166,6 +178,6 @@ if __name__ == '__main__':
     # create_migrations()
     # create_roles()
     # create_schemes()
-    create_sources()
-    # create_species()
+    # create_sources()
+    create_species()
     # create_users()
